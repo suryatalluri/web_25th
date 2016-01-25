@@ -1,11 +1,157 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
-    <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
-    <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+<wm-page data-ng-controller="MainPageController" pagetitle="Main" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-livegrid name="livegrid1" service="hrdb@Department">
+                <wm-layoutgrid name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="12" paddingleft="10" paddingright="10" name="gridcolumn1">
+                            <wm-livefilter title="FILTER DEPARTMENT" dataset="bind:Variables.HrdbDepartmentData.dataSet" captionalign="left" captionposition="left" name="livefilter1">
+                                <wm-layoutgrid name="layoutgrid2">
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn2">
+                                            <wm-filter-field name="deptid" field="deptid" displayname="Deptid" widget="number" is-range="false" filter-on="deptid" type="integer" is-primary-key="true" generator="identity" show="true" pc-display="true" mobile-display="true"
+                                            is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn3">
+                                            <wm-filter-field name="q3" field="q3" displayname="Q3" widget="number" lookup-field="q3" lookup-type="q3" is-range="false" filter-on="q3" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn4">
+                                            <wm-filter-field name="name" field="name" displayname="Name" widget="text" is-range="false" filter-on="name" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true" mobile-display="true"
+                                            is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn5">
+                                            <wm-filter-field name="q4" field="q4" displayname="Q4" widget="number" lookup-field="q4" lookup-type="q4" is-range="false" filter-on="q4" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn6">
+                                            <wm-filter-field name="budget" field="budget" displayname="Budget" widget="number" lookup-field="budget" lookup-type="budget" is-range="false" filter-on="budget" type="integer" is-primary-key="false" generator="assigned"
+                                            show="true" pc-display="true" mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn7">
+                                            <wm-filter-field name="deptcode" field="deptcode" displayname="Deptcode" widget="text" is-range="false" filter-on="deptcode" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn8">
+                                            <wm-filter-field name="q1" field="q1" displayname="Q1" widget="number" lookup-field="q1" lookup-type="q1" is-range="false" filter-on="q1" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn9">
+                                            <wm-filter-field name="location" field="location" displayname="Location" widget="text" is-range="false" filter-on="location" type="string" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn10">
+                                            <wm-filter-field name="q2" field="q2" displayname="Q2" widget="number" lookup-field="q2" lookup-type="q2" is-range="false" filter-on="q2" type="integer" is-primary-key="false" generator="assigned" show="true" pc-display="true"
+                                            mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" show="true" name="gridcolumn11">
+                                            <wm-filter-field name="tenantid" field="tenantid" displayname="Tenantid" widget="number" lookup-field="tenantid" lookup-type="tenantid" is-range="false" filter-on="tenantid" type="integer" is-primary-key="false"
+                                            generator="assigned" show="true" pc-display="true" mobile-display="true" is-related="undefined"></wm-filter-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-filter-action key="filter" class="btn-primary" iconclass="glyphicon glyphicon-filter" action="filter()" display-name="Filter" show="true" type="button"></wm-filter-action>
+                                <wm-filter-action key="clear" class="btn" iconclass="glyphicon glyphicon-remove-circle" action="clearFilter()" display-name="Clear" show="true" type="button"></wm-filter-action>
+                            </wm-livefilter>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="6" paddingleft="10" paddingright="10" name="gridcolumn12">
+                            <wm-grid gridfirstrowselect="true" deleterow="true" updaterow="true" insertrow="true" readonlygrid="false" title="DEPARTMENT LIST" dataset="bind:Widgets.livefilter1.result" name="grid1">
+                                <wm-grid-column binding="deptid" caption="Deptid" type="integer" backgroundcolor="" textcolor="" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="name" caption="Name" type="string" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="budget" caption="Budget" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="q1" caption="Q1" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="q2" caption="Q2" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="q3" caption="Q3" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="q4" caption="Q4" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="deptcode" caption="Deptcode" type="string" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="location" caption="Location" type="string" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                <wm-grid-column binding="tenantid" caption="Tenantid" type="integer" backgroundcolor="" textcolor="" primary-key="false" generator="assigned" col-class="" col-ng-class="" search-placeholder="Search" accessroles=""
+                                pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                            </wm-grid>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" paddingleft="10" paddingright="10" name="gridcolumn13">
+                            <wm-liveform novalidate="false" title="DEPARTMENT INFO" formlayout="inline" dataset="bind:Variables.HrdbDepartmentData.dataSet" captionalign="left" captionposition="left" name="liveform1">
+                                <wm-layoutgrid name="layoutgrid3">
+                                    <wm-gridrow name="gridrow8">
+                                        <wm-gridcolumn columnwidth="12" show="hide" name="gridcolumn14">
+                                            <wm-form-field name="deptid" displayname="Deptid" show="false" generator="identity" primary-key="true" key="deptid" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn15">
+                                            <wm-form-field name="name" displayname="Name" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" max-chars="20" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn16">
+                                            <wm-form-field name="budget" displayname="Budget" show="true" generator="assigned" primary-key="false" key="budget" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow10">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn17">
+                                            <wm-form-field name="q1" displayname="Q1" show="true" generator="assigned" primary-key="false" key="q1" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow11">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn18">
+                                            <wm-form-field name="q2" displayname="Q2" show="true" generator="assigned" primary-key="false" key="q2" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow12">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn19">
+                                            <wm-form-field name="q3" displayname="Q3" show="true" generator="assigned" primary-key="false" key="q3" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow13">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn20">
+                                            <wm-form-field name="q4" displayname="Q4" show="true" generator="assigned" primary-key="false" key="q4" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow14">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn21">
+                                            <wm-form-field name="deptcode" displayname="Deptcode" show="true" generator="assigned" primary-key="false" key="deptcode" type="string" is-related="false" max-chars="20" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow15">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn22">
+                                            <wm-form-field name="location" displayname="Location" show="true" generator="assigned" primary-key="false" key="location" type="string" is-related="false" max-chars="20" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow16">
+                                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn23">
+                                            <wm-form-field name="tenantid" displayname="Tenantid" show="true" generator="assigned" primary-key="false" key="tenantid" type="integer" is-related="false" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow17"></wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                                <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                            </wm-liveform>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-livegrid>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
-    <wm-footer name="footer" content="footer"></wm-footer>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>
